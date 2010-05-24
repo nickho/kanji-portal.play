@@ -1,0 +1,61 @@
+#{extends 'main.html' /}
+    <div id="page">
+       <div id="header" class="clearfix">
+				<!-- start branding -->
+                <div id="branding">
+                    <img src="@{'/public/images/logo.png'}"
+                         alt="Kanji Portal"/>
+                </div>
+                <!-- end branding -->
+
+                <div id="search">
+                    Welcome on Kanji-Portal!
+                </div>
+                <!-- end search -->
+
+                <hr/>
+            </div>
+            <!-- end header -->
+
+
+            <div id="content" class="clearfix">
+
+                <div id="main">
+                    #{doLayout/}
+                </div>
+                <!-- end main -->
+
+                <div id="local">
+                    #{menu/}
+                </div>
+                <!-- end local -->
+
+
+                <div id="nav">
+                    #{navigation/}
+                </div>
+                <!-- end nav -->
+
+            </div>
+            <!-- end content -->
+
+			<!-- start footer -->
+            <div id="footer" class="clearfix">
+                #{footer/}                
+            </div>
+            <!-- end footer -->
+    </div>
+    <!-- end page -->
+    <!-- start Google analytics token -->
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-1201360-6");
+            pageTracker._trackPageview();
+        } catch(err) {
+        }
+    </script>
+    <!-- end Google analytics token -->

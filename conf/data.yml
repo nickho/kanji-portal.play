@@ -1,0 +1,104 @@
+# you describe your data using the YAML notation here
+# and then load them using Fixtures.load("data.yml")
+
+
+### Languages ###
+Language(english):
+   codeIso63901: en
+   codeIso63902: eng
+   description: English language
+
+### TAGS ###
+Tag(jlpt1):
+   code: jlpt1
+   name: JLPT level 1
+   description: JLPT level 1 tag
+
+Tag(jlpt2):
+   code: jlpt2
+   name: JLPT level 2
+   description: JLPT level 2 tag
+
+Tag(jlpt3):
+   code: jlpt3
+   name: JLPT level 3
+   description: JLPT level 3 tag
+
+Tag(jlpt4):
+   code: jlpt4
+   name: JLPT level 4
+   description: JLPT level 4 tag
+
+### References Type ###
+ReferenceType(grjc):
+   code: grjc
+   name: Hendal
+   description: blah blah
+
+ReferenceType(stroke):
+   code: stroke
+   name: Stroke Number
+   description: blah blah
+
+
+### Spelling Type ###
+SpellingType(on):
+   code: on
+   name: Spelling On
+   description: blah blah
+
+SpellingType(kun):
+   code: kun
+   name: Spelling Kun
+   description: blah blah
+
+### References ###
+Reference(grjc129):
+   value: 129
+   refType: grjc
+
+Reference(grjc23):
+   value: 23
+   refType: grjc
+
+Reference(stroke1):
+   value: 1
+   refType: stroke
+
+### Spellings ###
+
+### Meanings ###
+Meaning(amour):
+   meaning: amour
+   language: english   
+
+Meaning(tendresse):
+   meaning: tendresse
+   language: english   
+
+Meaning(un):
+   meaning: un
+   language: english   
+
+### Kanji ###
+Kanji(amour):
+   kanji: 愛
+   description: Le kanji de l'amour
+   meanings: 
+               - amour
+               - tendresse
+   references: 
+               - grjc129
+   tags: 
+               - jlpt3
+
+Kanji(un):
+   kanji: 一
+   description: Le kanji du chiffre 1
+   meanings: 
+               - un
+   references: 
+               - grjc23
+               - stroke1
+   tags: 
+               - jlpt3

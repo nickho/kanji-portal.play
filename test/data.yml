@@ -1,0 +1,15 @@
+# you describe your data using the YAML notation here
+# and then load them using Fixtures.load("data.yml")
+
+# User(bob):
+#   email: bob@gmail.com
+#   password: secret
+#   fullname: Bob
+
+Kanji(amour):
+   kanji: am
+   description: Le kanji de l'amour
+
+Kanji(un):
+   kanji: un
+   description: Le kanji du chiffre 1

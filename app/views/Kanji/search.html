@@ -1,0 +1,26 @@
+#{extends 'template.html' /}
+#{set title:'Search' /}
+
+<fieldset>
+  <legend>Search Kanjis</legend>
+  <form action="@{search()}">
+    <input type="text" name="query" value="${query}"/>
+    <input type="submit"/>
+  </form>
+</fieldset>
+<table>
+  #{list items:kanjis, as:'kanji'}
+  <tr>
+    <td><a href="@{view(kanji.id)}">${kanji.kanji}</a></td>
+    <td>	
+      #{list items:kanji.meanings, as:'meaning'}
+        ${meaning.meaning}${meaning_isLast ? '' : ', '} 
+      #{/list}
+    </td>
+  </tr>
+#{/list}
+
+</table>
+<ul>
+</ul>
+

@@ -1,0 +1,50 @@
+#{extends 'template.html' /}
+#{set title:'View' /}
+
+<fieldset id="kanji">
+    <legend>Kanji</legend>
+
+    <div id="charbox">
+        <div id="char">
+            ${kanji.kanji}
+        </div>
+        <div id="meanings">
+	    #{if kanji.meanings.size() == 0}No Meanings#{/if}
+            #{list items:kanji.meanings, as:'meaning'}                
+                ${meaning.meaning}${meaning_isLast ? '' : ', '}
+            #{/list}
+        </div>
+    </div>
+
+    <div id="references">
+	#{if kanji.references.size() == 0}No references#{/if}
+        #{list items:kanji.references, as:'reference'}                
+                ${reference.refType.name} : ${reference.value}
+		<br/>
+        #{/list}
+    </div>
+
+    <div id="tags">
+        #{if kanji.tags.size() == 0}No Tags#{/if}
+        #{list items:kanji.tags, as:'tag'}                
+                ${tag.name}
+		<br/>
+        #{/list}
+    </div>
+</fieldset>
+
+#{if kanji.description}
+  <fieldset id="description">
+      <legend>Description</legend>
+      ${kanji.description}
+  </fieldset>
+#{/if}
+
+<fieldset id="prononciations">
+    <legend>Spellings</legend>
+    #{if kanji.spellings.size() == 0}No Spellings#{/if}
+    #{list items:kanji.spellings, as:'spelling'}                
+      ${spelling.type.name} : ${spelling.kana}
+      <br/>
+    #{/list}
+</fieldset>

@@ -1,0 +1,250 @@
+/* 
+A CSS Framework by Mike Stenhouse of Content with Style 
+-------------------------------------------------------
+
+Copyright (c) 2005, Mike Stenhouse of Content with Style
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    * Neither the name of CSS Framework nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/* SITE SPECIFIC LAYOUT */
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    text-align: center;
+
+    background: #dcdcdc;
+}
+
+div#page {
+    width: 780px; /*height: 100%;*/
+    min-height: 100%;
+
+    margin: 0 auto -50px;
+
+    padding: 0;
+
+    text-align: center;
+
+    background: black;
+}
+
+/* HEADER */
+div#header {
+    margin: 0px 10px 5em 10px;
+    padding: 20px 10px;
+
+    color: black;
+    background: #C0C0C0;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 35px;
+    -moz-box-shadow: 0px 0px 10px white; 
+    -webkit-box-shadow: 0px 0px 10px white; 
+    -khtml-box-shadow: 0px 0px 10px white;
+	background: -webkit-gradient(linear, left top, left bottom, from(#C0C0C0), to(#E0E0E0));
+    background: -moz-linear-gradient(top,  #C0C0C0,  #E0E0E0);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#C0C0C0', endColorstr='#E0E0E0'); 
+    text-align: left;
+}
+
+div#branding {
+    float: left;
+    width: 40%;
+
+    margin: 0;
+    padding: 10px 0 10px 20px;
+
+    text-align: left;
+}
+
+div#search {
+    float: right;
+    width: 49%;
+
+    margin: 0;
+    padding: 16px 20px 0 0;
+
+    text-align: right;
+}
+
+/* END HEADER */
+
+/* CONTENT */
+div#content {
+
+}
+
+/* MAIN */
+div#main {
+
+}
+
+/* END MAIN */
+
+/* SUB */
+div#sub {
+
+}
+
+/* END SUB */
+
+/* END CONTENT */
+
+/* FOOTER */
+div#footer {
+    color: white;
+    background-color: black;
+    height: 40px;
+    width: inherit;
+    clear: both;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+div#footer p {
+    margin: 0;
+    padding: 15px;
+    font-size: 0.8em;
+}
+
+/* END FOOTER */
+/* END LAYOUT */
+
+/* UL.SUBNAV */
+ul.subnav {
+    margin: 0;
+    padding: 0;
+
+    font-size: 0.8em;
+    list-style: none;
+}
+
+ul.subnav li {
+    margin: 0 0 1em 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+ul.subnav li a,
+    ul.subnav li a:link,
+    ul.subnav li a:visited,
+    ul.subnav li a:active {
+    text-decoration: none;
+    font-weight: bold;
+
+    color: black;
+}
+
+ul.subnav li a:hover {
+    text-decoration: underline;
+}
+
+ul.subnav li strong {
+    padding: 0 0 0 12px;
+
+    background: url("../img/subnav-highlight.gif") left top no-repeat transparent;
+}
+
+ul.subnav li strong a,
+    ul.subnav li strong a:link,
+    ul.subnav li strong a:visited,
+    ul.subnav li strong a:active {
+    color: white;
+    background-color: black;
+}
+
+/* END UL.SUBNAV */
+
+/* Left nav */
+
+div#local {
+    color: black;
+    /*background: #C0C0C0;*/
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 15px;
+    -moz-box-shadow: 0px 0px 5px white; 
+    -webkit-box-shadow: 0px 0px 5px white; 
+    -khtml-box-shadow: 0px 0px 5px white;
+    background: -webkit-gradient(linear, left top, left bottom, from(#C0C0C0), to(#E0E0E0));
+    background: -moz-linear-gradient(top,  #C0C0C0,  #E0E0E0);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#C0C0C0', endColorstr='#E0E0E0');
+}
+
+div#local li {
+    list-style-type: none;
+}
+
+/* end of left nav */
+
+/* The kanji view */
+
+#kanji {
+    height: auto;
+    color: white;
+}
+
+#kanji #charbox {
+    float: left;
+    width: 150px;
+}
+
+#kanji #charbox #char {
+    float: left;
+    width: 150px;
+    font-size: 500%;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 10px 20px 0px
+}
+
+#kanji #charbox #meanings {
+    float: left;
+    width: 150px;
+    padding: 10px 5px 10px 5px; /*background-color: #c0c0c0;*/
+    font-size: 80%;
+    text-align: center;
+}
+
+#kanji #references {
+    float: left;
+    width: 150px;
+    padding: 10px 10px 10px 10px; /*background-color: #c0c0c0;*/
+}
+
+#kanji #tags {
+    float: left;
+    width: 150px;
+    padding: 10px 10px 10px 10px; /*background-color: #c0c0c0;*/
+}
+
+/* End of the Kanji view */
