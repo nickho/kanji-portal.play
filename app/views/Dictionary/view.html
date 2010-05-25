@@ -1,0 +1,11 @@
+#{extends 'template.html' /}
+#{set title:'View' /}
+
+<fieldset id="entry">
+    <legend>Dictionary</legend>
+    ${entry.kanji}「${entry.kana}」 : 
+    #{list items:entry.translations, as:'translation'}
+       ${translation.detail}${translation_isLast ? '' : ', '} 
+    #{/list}
+</fieldset>
+

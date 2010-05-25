@@ -1,0 +1,27 @@
+#{extends 'template.html' /}
+#{set title:'Search' /}
+
+<fieldset>
+  <legend>Search Dictionary</legend>
+  <form action="@{search()}">
+    <input type="text" name="query" value="${query}"/>
+    <input type="submit"/>
+  </form>
+</fieldset>
+<table>
+  #{list items:entries, as:'entry'}
+  <tr>
+    <td><a href="@{view(entry.id)}">${entry.kanji}</a></td>
+    <td>「${entry.kana}」 : </td>
+    <td>	
+      #{list items:entry.translations, as:'translation'}
+        ${translation.detail}${translation_isLast ? '' : ', '} 
+      #{/list}
+    </td>
+  </tr>
+#{/list}
+
+</table>
+<ul>
+</ul>
+
