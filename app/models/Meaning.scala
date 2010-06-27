@@ -5,9 +5,10 @@ import javax.persistence._
  
 import play.db.jpa._
  
+/*@Indexed*/
 @Entity
 class Meaning(
-    var meaning: String,
+    /*@Field*/ var meaning: String,
     var description: String,
     @ManyToOne var language : Language
 ) extends Model {

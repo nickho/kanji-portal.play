@@ -1,5 +1,11 @@
 #{extends 'template.html' /}
-#{set title:'Home' /}
+#{set title:'News' /}
 
-<h1>Toto fait du velo</h1>
-aussi
+<div class="section">
+	#{list items:news, as:'newsEntry'}
+		<fieldset>
+		    <legend>${newsEntry.publicationDate.format('dd MMM yyyy')}</legend>
+		    ${newsEntry.description.nl2br()}
+		</fieldset>
+        #{/list}
+</div>

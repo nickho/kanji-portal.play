@@ -8,6 +8,30 @@ Language(english):
    codeIso63902: eng
    description: English language
 
+Language(french):
+   codeIso63901: fr
+   codeIso63902: fre
+   description: French language
+
+### News ###
+News(no1):
+   description: "<p>J'ai mis à jours la recherche dans le dictionnaire pour utiliser les indexes, ainsi que les services pour le dictionnaire. Cela reste une petite mise à jours.</p>"
+   publicationDate: 28-10-2009
+   author: Nickho
+   language: french
+
+News(no2):
+   description: "<p>Et voila, une nouvelle version est en ligne. La base de donnée est renforcé et le plus gros du travail va maintenant ce tourner vers les prononciations et le vocabulaire. Il reste aussi à tagger les kanjis du jlpt 3,2,et 1.</p><p>Les améliorations sont : Import des kanjis et des sens (~6000) avec les tags et reférénces. J'en est profité pour faire un peu de néttoyage dans l'interface. Les services rest sont finis aussi avec 3 points d'entrées pour fonctionner avec Mononara</p>"
+   publicationDate: 14-07-2009
+   author: Nickho
+   language: french
+
+News(no3):
+   description: "<p>The dictionary search now use the lucene indexes (like the kanji search). The same update were also done for the dictionary service. This is a minor update.</p>"
+   publicationDate: 28-10-2009
+   author: Nickho
+   language: english
+
 ### TAGS ###
 Tag(jlpt1):
    code: jlpt1
@@ -102,3 +126,19 @@ Kanji(un):
                - stroke1
    tags: 
                - jlpt3
+
+### Dictionary ###
+Dictionary(demain):
+   romaji: ashita
+   kanji: 明日
+   kana: あした
+   tags: 
+               - jlpt4
+
+### Translation ###
+Translation(demain):
+   detail: demain
+   language: english
+   dictionary: demain
+
+

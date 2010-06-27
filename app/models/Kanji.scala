@@ -5,10 +5,11 @@ import javax.persistence._
 
 import play.db.jpa._
  
+/*@Indexed*/
 @Entity
 class Kanji(
     var kanji: String,
-    var description: String
+    /*@Field*/ var description: String
 ) extends Model {
     def this() = this(null, null)
     

@@ -10,6 +10,12 @@ GET		/kanji/search/{query}		Kanji.search
 GET		/kanji/search/?			Kanji.search
 GET		/kanji/{id}			Kanji.view
 
+# Dictionary
+GET		/dictionary/search/{query}		Dictionary.search
+GET		/dictionary/search/?			Dictionary.search
+GET		/dictionary/{id}			Dictionary.view
+
+
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
